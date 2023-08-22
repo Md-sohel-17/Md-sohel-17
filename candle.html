@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="candle.css">
+</head>
+<body>
+    <div id="cont">
+        <img  id="img1" src="XTiU.gif" alt="gif">
+        <img id="img2" src="XTiU.gif" alt="gif">
+
+        <div class="candle">
+                <div class="thread">
+            <div class="flames"></div>
+                </div>
+        </div>
+        <div class="candle">
+            <div class="thread">
+                <div class="flames"></div>
+            </div>
+        </div>
+            <button id="btn1">Glow</button>
+            <button id="btn2">Blow</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.0.js">
+
+    </script>
+<script>
+    $(document).ready(()=>{
+        $("#btn1").click(()=>{
+            $(".flames").css("display","block");
+            $("#img1,#img2").css("display","none")
+        })
+        $("#btn2").click(()=>{
+            $(".flames").addClass("blow");
+            setTimeout(()=>{
+            $(".flames").removeClass("blow").css("display","none")},2000);
+
+            setTimeout(()=>{
+            $("#img1,#img2").css("display","inline")
+
+            },2020);
+
+        })
+        
+
+
+    })
+</script>
+</body>
+</html>
